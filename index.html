@@ -1,1 +1,118 @@
-Coming soon...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1877 | SYSTEM STATUS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050505;
+            color: #00ff41; /* Classic hacker green */
+            font-family: 'Courier Prime', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* CRT Scanline Effect */
+        .crt::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .container {
+            z-index: 10;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 0 10px #00ff41;
+            letter-spacing: 5px;
+        }
+
+        .status {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .team {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #00ff41;
+        }
+
+        .link {
+            margin-top: 20px;
+            display: inline-block;
+            color: #888;
+            text-decoration: none;
+            border: 1px solid #333;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .link:hover {
+            color: #00ff41;
+            border-color: #00ff41;
+            background: rgba(0, 255, 65, 0.1);
+        }
+
+        /* Blinking Cursor */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #00ff41;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body class="crt">
+
+    <div class="container">
+        <h1>COMING SOON<span class="cursor"></span></h1>
+        <div class="status">SYSTEM INITIALIZING...</div>
+        
+        <div class="team">1877</div>
+        
+        <br>
+        <a href="https://t.me/Org1877" class="link" target="_blank">T.ME/ORG1877</a>
+    </div>
+
+    <script>
+        // Redirect to 1877.to after 10 seconds
+        setTimeout(() => {
+            window.location.href = "https://1877.to";
+        }, 10000);
+    </script>
+</body>
+</html>
