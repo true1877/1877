@@ -20,66 +20,67 @@
 
         .container {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
         }
 
         h1 {
             font-weight: 300;
-            font-size: 1.2rem;
-            letter-spacing: 0.5rem;
+            font-size: 1rem;
+            letter-spacing: 0.4rem;
             text-transform: uppercase;
-            margin-bottom: 2rem;
-            opacity: 0.7;
+            opacity: 0.5;
+            margin-bottom: 3rem;
         }
 
-        .team {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -0.1rem;
-            margin: 0;
-        }
-
-        .footer {
-            margin-top: 3rem;
-        }
-
-        a {
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             color: #fff;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             letter-spacing: 0.1rem;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             border: 1px solid #333;
             transition: all 0.3s ease;
         }
 
-        a:hover {
+        .btn:hover {
             background: #fff;
             color: #000;
         }
 
-        /* Subtle fade-in */
-        .fade {
-            animation: fadeIn 1.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* SVG Telegram Icon */
+        .tg-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
         }
     </style>
 </head>
 <body>
 
-    <div class="container fade">
+    <div class="container">
+        <img src="" alt="1877" class="logo-img">
+        
         <h1>Coming Soon</h1>
-        <div class="team">1877</div>
-        <div class="footer">
-            <a href="https://t.me/Org1877" target="_blank">ORG 1877</a>
-        </div>
+        
+        <a href="https://t.me/Org1877" target="_blank" class="btn">
+            <svg class="tg-icon" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.174-.367.428-.535.75l-.01.018c-.374.738-1.52 5.09-1.92 6.55-.16.58-.453.727-.85.76-.732.062-1.284-.46-1.99-.974-1.11-.803-1.74-1.3-2.82-2.036-1.248-.845-.44-1.308.272-2.06.187-.197 3.44-3.15 3.5-3.413.007-.03.013-.07-.008-.09-.022-.02-.06-.013-.086-.007-.037.01-3.64 2.336-5.15 3.32-1.02.668-1.796.697-2.55.438-.845-.292-1.505-.445-2.296-.708-.85-.28-1.23-.43-1.254-.91-.014-.287.327-.58.885-.886 3.48-1.69 5.8-2.815 6.96-3.376 3.32-1.61 4.02-1.87 4.478-1.878.099-.002.324.023.468.14.12.1.168.23.187.336.02.115.04.275.034.455z"/></svg>
+            ORG 1877
+        </a>
     </div>
 
     <script>
-        // Redirect logic
         setTimeout(() => {
             window.location.href = "https://1877.to";
         }, 10000);
